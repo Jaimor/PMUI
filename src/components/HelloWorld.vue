@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2 @click="toast">Essential Links</h2>
     <ul>
       <li>
         <a
@@ -89,6 +89,14 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  mounted() {
+
+  },
+  methods: {
+    toast() {
+      this.$toast.success("操作成功");
     }
   }
 }
