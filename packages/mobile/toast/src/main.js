@@ -23,7 +23,6 @@ const Toast = function (options) {
   document.body.appendChild(instance.$el);
   instance.visible = true;
   instance.$el.style.zIndex = ZIndex.nextZIndex();
-  console.log(instance);
   return instance;
 };
 
