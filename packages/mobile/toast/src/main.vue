@@ -45,7 +45,8 @@
       onClose: {
         default: _ => {},
         type: Function
-      }
+      },
+      loading: Boolean
     },
     computed: {
       iconTypeClass() {

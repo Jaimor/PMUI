@@ -34,6 +34,10 @@ Object.keys(Constant.typeMap).forEach(type => {
       }
     }
     options.type = type;
+    if (type === Constant.typeMap.loading) {
+      options.duration = 0;
+      if (!options.iconClass) options.iconClass = "pm-font pm-icon-loading";
+    }
     return Toast(options);
   }
 });

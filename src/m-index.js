@@ -1,8 +1,10 @@
 import Button from '../packages/mobile/button/index.js';
+import Loading from '../packages/mobile/loading/index.js';
 import Toast from '../packages/mobile/toast/index.js';
 
 const components = [
-  Button
+  Button,
+  Loading
 ];
 
 const install = (Vue) => {
