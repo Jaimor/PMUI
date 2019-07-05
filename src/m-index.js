@@ -1,12 +1,13 @@
+import Button from '../packages/mobile/button/index.js';
 import Toast from '../packages/mobile/toast/index.js';
 
-const commponents = [
-
+const components = [
+  Button
 ];
 
 const install = (Vue) => {
-  commponents.forEach(commponent => {
-    Vue.component(component.name, commponent);
+  components.forEach(component => {
+    Vue.component(component.name, component);
   });
   Vue.prototype.$toast = Toast;
 };
