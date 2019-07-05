@@ -1,0 +1,27 @@
+@import "../common/index.less";
+
+.pm-loading {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &--vertical {
+    flex-direction: column;
+    .pm-loading__icon {
+      margin-right: 0;
+      margin-bottom: .5rem;
+    }
+  }
+  
+  &__icon {
+    margin-right: .5rem;
+    animation: loading-spin 2s linear infinite;
+  }
+  &__text {
+    padding: 0;
+  }
+}
+
