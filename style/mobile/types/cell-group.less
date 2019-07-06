@@ -1,0 +1,21 @@
+@import "../common/index.less";
+
+.pm-cell-group {
+  position: relative;
+  padding: @page-level-padding;
+
+  &__title {
+    position: absolute;
+    margin-bottom: 1rem;
+    &--left {
+      left: 0;
+    }
+    &--center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &--right {
+      right: 0;
+    }
+  }
+}
