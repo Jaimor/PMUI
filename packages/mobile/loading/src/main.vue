@@ -1,7 +1,12 @@
 <template>
   <div :class="['pm-loading', { 'pm-loading--vertical': vertical }]">
-    <i :class="`pm-loading__icon pm-font pm-icon-${icon}`"></i>
-    <span :class="`pm-loading__text`">
+    <i
+      :class="`pm-loading__icon pm-font pm-icon-${icon}`"
+      :style="{fontSize: iconSize}"
+    ></i>
+    <span :class="`pm-loading__text`"
+          :style="{fontSize: iconSize}"
+    >
       <slot></slot>
     </span>
   </div>
@@ -19,10 +24,6 @@
       iconSize: String,
       textSize: String,
       vertical: Boolean
-    },
-    mounted() {
-      if (this.iconSize) this.$el.children[0].style.fontSize = this.iconSize;
-      if (this.textSize) this.$el.children[1].style.fontSize = this.textSize;
     }
   }
 </script>
