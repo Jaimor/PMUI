@@ -1,7 +1,7 @@
 <template>
-  <div style="background-color: #f0f3f6;">
-    <pm-cell-group title="这是一个测试">
-
+  <div style="background-color: #f8f8f8;">
+    <pm-cell-group title="这是一个测试" title-position="right">
+      <pm-cell icon="location-o"></pm-cell>
     </pm-cell-group>
   </div>
 </template>

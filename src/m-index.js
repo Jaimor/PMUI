@@ -1,6 +1,7 @@
 import Button from '../packages/mobile/button/index.js';
 import Cell from '../packages/mobile/cell/index.js';
 import CellGroup from '../packages/mobile/cell-group/index.js';
+import Icon from '../packages/mobile/Icon/index.js';
 import Loading from '../packages/mobile/loading/index.js';
 import Toast from '../packages/mobile/toast/index.js';
 
@@ -8,6 +9,7 @@ const components = [
   Button,
   Cell,
   CellGroup,
+  Icon,
   Loading
 ];
 

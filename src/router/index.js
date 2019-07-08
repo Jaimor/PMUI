@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
+import IconTest from '@/components/mobile/IconTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
@@ -19,11 +20,16 @@ export default new Router({
       path: '/button',
       name: 'ButtonTest',
       component: ButtonTest
-    },,
+    },
     {
       path: '/cell',
       name: 'CellTest',
       component: CellTest
+    },
+    {
+      path: '/icon',
+      name: 'IconTest',
+      component: IconTest
     },
     {
       path: '/loading',
