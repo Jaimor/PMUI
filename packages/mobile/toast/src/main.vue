@@ -51,7 +51,7 @@
     computed: {
       iconTypeClass() {
         return Constant.typeMap[this.type] !== Constant.typeMap.info && this.iconClass === ''
-          ? `van-icon van-icon-${ Constant.typeMap[this.type] }`
+          ? `pm-font pm-icon-${ Constant.typeMap[this.type] }`
           : '';
       }
     },

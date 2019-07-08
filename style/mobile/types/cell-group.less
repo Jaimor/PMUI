@@ -2,11 +2,12 @@
 
 .pm-cell-group {
   overflow: auto;
-  padding: @page-level-padding;
+  //padding: @page-level-padding;
 
   &__title {
-    margin-bottom: 1rem;
+    box-sizing: border-box;
     //font-size: @font-size-default;
+    padding: @cell-group-title-padding;
     color: @cell-group-title-color;
 
     &--left {

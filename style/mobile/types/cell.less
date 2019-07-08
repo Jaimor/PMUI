@@ -1,2 +1,17 @@
 @import "../common/index.less";
 
+.pm-cell {
+  display: flex;
+  display: -webkit-flex;
+  background-color: @border-color-default;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: @cell-padding;
+  line-height: @cell-line-height;
+
+  &__icon {
+    width: @cell-icon-width;
+  }
+}

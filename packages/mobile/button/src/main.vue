@@ -16,7 +16,7 @@
 <!--        <circle cx="50" cy="50" r="20" fill="none"></circle>-->
 <!--      </svg>-->
     </i>
-    <i v-else-if="icon" :class="['pm-button__icon van-icon', `van-icon-${icon}`]"></i>
+    <i v-else-if="icon" :class="['pm-button__icon pm-font', `pm-icon-${icon}`]"></i>
     <slot></slot>
   </button>
 </template>
