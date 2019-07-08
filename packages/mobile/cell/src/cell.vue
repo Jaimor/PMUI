@@ -26,10 +26,10 @@
     },
     computed: {
       widthTitle() {
-        return parseInt(this.titleRatio) * 10 + '%';
+        return Number(this.titleRatio) * 10 + '%';
       },
       widthValue() {
-        return (10 -parseInt(this.titleRatio)) * 10 + '%';
+        return (10 - Number(this.titleRatio)) * 10 + '%';
       }
     },
     methods: {
