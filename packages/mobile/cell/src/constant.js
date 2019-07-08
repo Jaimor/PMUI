@@ -5,5 +5,8 @@ export default {
       center: "center",
       right: "right"
     }
+  },
+  cell: {
+
   }
 }

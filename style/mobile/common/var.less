@@ -21,8 +21,11 @@
 
 // common other
 @border-radius-default: .2rem;
-@button-border-width-default: .06rem;
-@page-level-padding: .5rem 1rem;
+@border-width-default: .06rem;
+@button-border-width-default: @border-width-default;
+@page-level-padding-left-right: .5rem;
+@page-level-padding-top-bottom: .5rem;
+@page-level-padding: @page-level-padding-top-bottom @page-level-padding-left-right;
 @font-size-default: .9rem;
 
 
@@ -72,11 +75,12 @@
 
 // cell cell-group
 @cell-group-title-color: rgba(69, 90, 100, .6);
-@cell-group-title-padding: 1rem;
+@cell-group-title-padding: @page-level-padding-left-right;
 
-@cell-padding: 1rem;
+@cell-padding: @page-level-padding-left-right;
 @cell-line-height: 1rem;
 @cell-icon-width: 1rem;
+@cell-font-size: .9rem;
 
 
 // toast

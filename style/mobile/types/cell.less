@@ -3,15 +3,42 @@
 .pm-cell {
   display: flex;
   display: -webkit-flex;
-  background-color: @border-color-default;
+  background-color: @white;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
   padding: @cell-padding;
   line-height: @cell-line-height;
+  font-stretch: @cell-font-size;
+  border-bottom: @border-width-default solid @border-color-default;
+
+  &--clickstyle {
+    &:active {
+      background-color: rgb(243, 244, 246);
+    }
+  }
 
   &__icon {
     width: @cell-icon-width;
+  }
+
+  &__content {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.3rem @cell-padding;
+
+    &--left {
+      width: 50%;
+      text-align: left;
+    }
+    &--right {
+      width: 50%;
+      text-align: right;
+    }
   }
 }
