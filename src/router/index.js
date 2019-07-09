@@ -5,6 +5,7 @@ import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
 import IconTest from '@/components/mobile/IconTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
+import RowColTest from '@/components/mobile/RowColTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
 Vue.use(Router)
@@ -35,6 +36,11 @@ export default new Router({
       path: '/loading',
       name: 'LoadingTest',
       component: LoadingTest
+    },
+    {
+      path: '/rowcol',
+      name: 'RowColTest',
+      component: RowColTest
     },
     {
       path: '/toast',

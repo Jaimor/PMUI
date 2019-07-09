@@ -1,0 +1,15 @@
+@import "../common/index.less";
+
+.pm-col {
+
+  .col-util(24, 1);
+  .col-util(@len, @i) when (@len >= @i) {
+    &--span-@{i} {
+      width: @i / 24 * 100%
+    }
+    &--offset-@{i} {
+      margin-left: @i / 24 * 100%;
+    }
+    .col-util(24, @i + 1);
+  }
+}
