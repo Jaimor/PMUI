@@ -5,6 +5,7 @@ import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
 import IconTest from '@/components/mobile/IconTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
+import PopupTest from '@/components/mobile/PopupTest'
 import RowColTest from '@/components/mobile/RowColTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/loading',
       name: 'LoadingTest',
       component: LoadingTest
+    },
+    {
+      path: '/popup',
+      name: 'PopupTest',
+      component: PopupTest
     },
     {
       path: '/rowcol',

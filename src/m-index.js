@@ -4,6 +4,7 @@ import CellGroup from '../packages/mobile/cell-group/index.js';
 import Col from '../packages/mobile/col/index.js';
 import Icon from '../packages/mobile/Icon/index.js';
 import Loading from '../packages/mobile/loading/index.js';
+import Popup from '../packages/mobile/popup/index.js';
 import Row from '../packages/mobile/row/index.js';
 import Toast from '../packages/mobile/toast/index.js';
 
@@ -13,8 +14,9 @@ const components = [
   CellGroup,
   Col,
   Icon,
-  Row,
-  Loading
+  Loading,
+  Popup,
+  Row
 ];
 
 const install = (Vue) => {
