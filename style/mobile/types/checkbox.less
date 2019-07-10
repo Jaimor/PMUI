@@ -2,13 +2,40 @@
 
 .pm-checkbox {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  margin: @checkbox-margin;
+  height: @checkbox-height;
+  line-height: @checkbox-height;
+
+  &__label--top {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__label--bottom {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__label--left {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__label--right {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   &__icon {
-
+    width: @checkbox-icon-div-size;
+    height: @checkbox-icon-div-size;
+    border-radius: @checkbox-icon-div-size;
+    line-height: @checkbox-icon-div-size;
+    border: 1px solid @checkbox-icon-border-color;
   }
   &__label {
-
+    margin: @checkbox-label-margin;
+    line-height: @checkbox-height;
   }
 }
