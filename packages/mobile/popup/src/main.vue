@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name="pm-popup--slider">
+    <transition name=`pm-popup--slider--${position}`>
       <div
         v-if="show"
         :class="['pm-popup', `pm-popup--${position}`]"
@@ -9,12 +9,14 @@
         <slot></slot>
       </div>
     </transition>
+    <transition name="pm-popup__mask--slider">
     <div
       v-if="show"
       class="pm-popup__mask"
       :style="{zIndex: maskZIndex}"
       @click="maskClickHandler"
     ></div>
+    </transition>
   </div>
 </template>
 
@@ -39,10 +41,8 @@
         type: String,
         default: Constant.positionMap.center
       },
-      height: {
-        type: [String, Number],
-        required: true
-      },
+      height: [String, Number],
+      width: [String, Number],
       clickMaskToClose: {
         type: Boolean,
         default: true
@@ -56,14 +56,14 @@
       style() {
         return {
           zIndex: this.zIndex,
-          height: this.height
+          height: !this.height ? undefined : typeof this.height === 'number' ? `${this.height}rem` : this.height,
+          width: !this.width ? undefined : typeof this.width === 'number' ? `${this.width}rem` : this.width
         }
       }
     },
     methods: {
       maskClickHandler() {
         if (this.clickMaskToClose) {
-          console.log("abc")
           this.$emit('change', false);
         }
       }
