@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
+import CheckboxTest from '@/components/mobile/CheckboxTest'
 import IconTest from '@/components/mobile/IconTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
 import PopupTest from '@/components/mobile/PopupTest'
@@ -27,6 +28,11 @@ export default new Router({
       path: '/cell',
       name: 'CellTest',
       component: CellTest
+    },
+    {
+      path: '/checkbox',
+      name: 'CheckboxTest',
+      component: CheckboxTest
     },
     {
       path: '/icon',
