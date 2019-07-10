@@ -11,7 +11,7 @@
     </transition>
     <transition name="pm-popup__mask--slider">
     <div
-      v-if="show"
+      v-if="show && showMask"
       class="pm-popup__mask"
       :style="{zIndex: maskZIndex}"
       @click="maskClickHandler"
@@ -45,6 +45,10 @@
       height: [String, Number],
       width: [String, Number],
       clickMaskToClose: {
+        type: Boolean,
+        default: true
+      },
+      showMask: {
         type: Boolean,
         default: true
       }

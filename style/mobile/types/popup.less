@@ -31,16 +31,28 @@
   }
 
   &--slider--top-enter-active {
-    animation: pm-popup-from-top .7s ease;
+    animation: pm-popup-from-top @popup-enter-active-time ease;
   }
   &--slider--top-leave-active {
-    animation: pm-popup-from-top .3s ease reverse;
+    animation: pm-popup-from-top @popup-leave-active-time ease reverse;
   }
   &--slider--right-enter-active {
-    animation: pm-popup-from-right .7s ease;
+    animation: pm-popup-from-right @popup-enter-active-time ease;
   }
   &--slider--right-leave-active {
-    animation: pm-popup-from-right .3s ease reverse;
+    animation: pm-popup-from-right @popup-leave-active-time ease reverse;
+  }
+  &--slider--bottom-enter-active {
+    animation: pm-popup-from-bottom @popup-enter-active-time ease;
+  }
+  &--slider--bottom-leave-active {
+    animation: pm-popup-from-bottom @popup-leave-active-time ease reverse;
+  }
+  &--slider--left-enter-active {
+    animation: pm-popup-from-left @popup-enter-active-time ease;
+  }
+  &--slider--left-leave-active {
+    animation: pm-popup-from-left @popup-leave-active-time ease reverse;
   }
 
   &__mask {
