@@ -1,8 +1,14 @@
 <template>
   <div>
-    <pm-popup :show="show" position="top" height="100px">xxxxx</pm-popup>
+    <pm-popup v-model="showTop" position="top" height="100px">我是从顶部弹出来的</pm-popup>
+    <pm-popup v-model="showRight" position="right" width="100px">我是从右边弹出来的</pm-popup>
+    <pm-popup v-model="showBottom" position="bottom" height="200px">我是从底部弹出来的</pm-popup>
+    <pm-popup v-model="showLeft" position="left" width="100px">我是从左边弹出来的</pm-popup>
     <div>
-      <pm-button type="primary" @click="up">上边弹出</pm-button>
+      <pm-button type="primary" @click="show('top')">Top弹出</pm-button>
+      <pm-button type="primary" @click="show('right')">Right弹出</pm-button>
+      <pm-button type="primary" @click="show('bottom')">Bottom弹出</pm-button>
+      <pm-button type="primary" @click="show('left')">Left弹出</pm-button>
     </div>
   </div>
 </template>
@@ -12,20 +18,18 @@
     name: "PopupTest",
     data() {
       return {
-        show: false
-      }
-    },
-    watch: {
-      show(v) {
-        console.log(v);
+        showTop: false,
+        showRight: false,
+        showBottom: false,
+        showLeft: false,
       }
     },
     methods: {
-      up() {
-        this.show = true;
-        // setTimeout(_ => {
-        //   this.show = false;
-        // }, 3000);
+      show(dir) {
+        if (dir === 'top') this.showTop = true;
+        if (dir === 'right') this.showRight = true;
+        if (dir === 'bottom') this.showBottom = true;
+        if (dir === 'left') this.showLeft = true;
       }
     }
   }
