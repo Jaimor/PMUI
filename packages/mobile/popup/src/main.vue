@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name=`pm-popup--slider--${position}`>
+    <transition :name="transitionName">
       <div
         v-if="show"
         :class="['pm-popup', `pm-popup--${position}`]"
@@ -29,7 +29,8 @@
     data() {
       return {
         maskZIndex: ZIndex.nextZIndex(),
-        zIndex: ZIndex.nextZIndex()
+        zIndex: ZIndex.nextZIndex(),
+        transitionName: ''
       }
     },
     props: {
@@ -60,6 +61,9 @@
           width: !this.width ? undefined : typeof this.width === 'number' ? `${this.width}rem` : this.width
         }
       }
+    },
+    created() {
+      this.transitionName = `pm-popup--slider--${this.position}`;
     },
     methods: {
       maskClickHandler() {
