@@ -39,7 +39,8 @@
           if (f) {
             value.indexOf(childIndex) === -1 && value.push(childIndex);
           } else {
-            value.indexOf(childIndex) > -1 && value.splice(childIndex, 1);
+            const i = value.indexOf(childIndex);
+            i > -1 && value.splice(i, 1);
           }
           this.$emit('input', value);
         }

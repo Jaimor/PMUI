@@ -36,7 +36,7 @@
         check3: true,
         check4: false,
         check5: true,
-        checkGroup: [1]
+        checkGroup: [1,2]
       }
     },
     watch: {

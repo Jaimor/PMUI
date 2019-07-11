@@ -88,7 +88,8 @@
       toggle() {
         if (!this.disabled) {
           if (this.parent) {
-            this.checked = !this.checked;
+            // this.checked = !this.checked;
+            this.parent.modifyValue(this, !this.checked);
           } else {
             this.$emit('input', !this.value);
           }
