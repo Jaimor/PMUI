@@ -26,7 +26,8 @@
       return {
         iconBackgroundColor: this.value ? this.checkedColor : undefined,
         iconBorderColor: this.value ? this.checkedColor : undefined,
-        checked: false
+        checked: false,   //用于存在checkbox-group父组件的时候用于控制选中状态
+        parent: this.pmCheckboxGroup
       }
     },
     inject: {
@@ -50,17 +51,13 @@
 
       },
       checked(v) {
-
+        // this.parent.modifyValue();
       }
     },
     created() {
       if (this.parent) {
-        // this.parent.children.push(this);
+        this.parent.children.push(this);
       }
-    },
-    mounted() {
-      // console.log("checkbox-mounted")
-      console.log(this.pmCheckboxGroup)
     },
     computed: {
       show() {
@@ -85,9 +82,6 @@
           backgroundColor: this.iconBackgroundColor,
           borderColor: this.iconBorderColor
         }
-      },
-      parent() {
-        return this.pmCheckboxGroup
       }
     },
     methods: {

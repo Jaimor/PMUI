@@ -36,7 +36,7 @@
         check3: true,
         check4: false,
         check5: true,
-        checkGroup: []
+        checkGroup: [1]
       }
     },
     watch: {

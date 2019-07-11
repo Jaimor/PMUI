@@ -12,8 +12,10 @@
         children: []
       }
     },
-    provide: {
-      pmCheckboxGroup: this
+    provide() {
+      return {
+        pmCheckboxGroup: this
+      }
     },
     props: {
       value: {
@@ -21,20 +23,34 @@
         default: []
       }
     },
-    created() {
-      // let len = this.value.length;
-      // while (len - 1 >= 0) {
-      //   this.children
-      // }
-      console.log("checkboxgroup-create");
-      console.log(this)
+    watch: {
+      value(v) {
+        this.reloadChecked(v);
+      }
     },
     mounted() {
-      console.log("checkboxgroup-mounted")
+      this.reloadChecked(this.value);
     },
     methods: {
-      modifyValue() {
-
+      modifyValue(child, f) {
+        let value = this.value;
+        const childIndex = this.children.indexOf(child);
+        if (childIndex > -1) {
+          if (f) {
+            value.indexOf(childIndex) === -1 && value.push(childIndex);
+          } else {
+            value.indexOf(childIndex) > -1 && value.splice(childIndex, 1);
+          }
+          this.$emit('input', value);
+        }
+      },
+      reloadChecked(checkboxIndexArr) {
+        this.children.forEach(child => {
+          child.checked = false;
+        });
+        checkboxIndexArr.forEach(v => {
+          this.children[v].checked = true;
+        })
       }
     }
   }
