@@ -33,9 +33,11 @@
     border-radius: @checkbox-icon-div-size;
     line-height: @checkbox-icon-div-size;
     border: 1px solid @checkbox-icon-border-color;
+    box-sizing: border-box;
 
     &--disabled {
-      color: @checkbox-disabled-color;
+      border-color: @checkbox-icon-disabled-backgroundColor;
+      background-color: @checkbox-disabled-color;
     }
   }
   &__label {

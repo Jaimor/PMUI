@@ -3,11 +3,11 @@
     :class="['pm-checkbox']"
   >
     <div
-      :class="['pm-checkbox__icon', { 'pm-checkbox__label--disabled': disabled }]"
-      :style="{backgroundColor: iconBackgroundColor, borderColor: iconBorderColor}"
+      :class="['pm-checkbox__icon', { 'pm-checkbox__icon--disabled': disabled }]"
+      :style="iconStyle"
       @click="iconClickHandler"
     >
-      <pm-icon v-if="value" icon="success" color="white" font-size=".8rem"></pm-icon>
+      <pm-icon v-if="show" icon="success" color="white" font-size=".8rem"></pm-icon>
     </div>
     <label
       :class="['pm-checkbox__label', { 'pm-checkbox__label--disabled': disabled }]"
@@ -24,8 +24,14 @@
     name: "PmCheckbox",
     data() {
       return {
-        iconBackgroundColor: this.value ? this.checkedColor : Constant.checkbox.iconBackgroundColorDefault,
-        iconBorderColor: this.value ? this.checkedColor : Constant.checkbox.iconBorderColorDefault
+        iconBackgroundColor: this.value ? this.checkedColor : undefined,
+        iconBorderColor: this.value ? this.checkedColor : undefined,
+        checked: false
+      }
+    },
+    inject: {
+      pmCheckboxGroup: {
+        default: null
       }
     },
     props: {
@@ -41,24 +47,58 @@
     },
     watch: {
       value(v) {
-        if (v) {
-          this.iconBackgroundColor = this.checkedColor;
-          this.iconBorderColor = this.checkedColor;
-        } else {
-          this.iconBackgroundColor = Constant.checkbox.iconBackgroundColorDefault;
-          this.iconBorderColor = Constant.checkbox.iconBorderColorDefault;
-        }
+
+      },
+      checked(v) {
+
       }
     },
     created() {
-      if (this.disabled) {
-        this.iconBackgroundColor = Constant.checkbox.iconBorderColorDefault;
-        this.iconBorderColor = Constant.checkbox.iconDisabledBorderColor
+      if (this.parent) {
+        // this.parent.children.push(this);
+      }
+    },
+    mounted() {
+      // console.log("checkbox-mounted")
+      console.log(this.pmCheckboxGroup)
+    },
+    computed: {
+      show() {
+        let show;
+        if (this.parent) {
+          show = this.checked;
+        } else {
+          show = this.value;
+        }
+        if (show) {
+          this.iconBackgroundColor = this.checkedColor;
+          this.iconBorderColor = this.checkedColor;
+        } else {
+          this.iconBackgroundColor = undefined;
+          this.iconBorderColor = undefined;
+        }
+        return show;
+      },
+      iconStyle() {
+        if (this.disabled) return {};
+        return {
+          backgroundColor: this.iconBackgroundColor,
+          borderColor: this.iconBorderColor
+        }
+      },
+      parent() {
+        return this.pmCheckboxGroup
       }
     },
     methods: {
       toggle() {
-        if (!this.disabled) this.$emit('input', !this.value);
+        if (!this.disabled) {
+          if (this.parent) {
+            this.checked = !this.checked;
+          } else {
+            this.$emit('input', !this.value);
+          }
+        }
       },
       iconClickHandler() {
         this.toggle();
@@ -69,7 +109,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>
