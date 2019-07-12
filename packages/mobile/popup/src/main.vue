@@ -40,7 +40,7 @@
       },
       position: {
         type: String,
-        default: Constant.positionMap.center
+        default: Constant.positionMap.bottom
       },
       height: [String, Number],
       width: [String, Number],
