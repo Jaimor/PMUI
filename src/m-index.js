@@ -7,6 +7,7 @@ import Col from '../packages/mobile/col/index.js';
 import DatetimePicker from '../packages/mobile/datetime-picker/index.js';
 import Icon from '../packages/mobile/icon/index.js';
 import Loading from '../packages/mobile/loading/index.js';
+import Picker from '../packages/mobile/picker/index.js';
 import Popup from '../packages/mobile/popup/index.js';
 import Row from '../packages/mobile/row/index.js';
 import Toast from '../packages/mobile/toast/index.js';
@@ -21,6 +22,7 @@ const components = [
   DatetimePicker,
   Icon,
   Loading,
+  Picker,
   Popup,
   Row
 ];
