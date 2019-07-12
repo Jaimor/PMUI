@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
 import CheckboxTest from '@/components/mobile/CheckboxTest'
+import DatetimePickerTest from '@/components/mobile/DatetimePickerTest'
 import IconTest from '@/components/mobile/IconTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
 import PopupTest from '@/components/mobile/PopupTest'
@@ -33,6 +34,11 @@ export default new Router({
       path: '/checkbox',
       name: 'CheckboxTest',
       component: CheckboxTest
+    },
+    {
+      path: '/datetime-picker',
+      name: 'DatetimePickerTest',
+      component: DatetimePickerTest
     },
     {
       path: '/icon',
