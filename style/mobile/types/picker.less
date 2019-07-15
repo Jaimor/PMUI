@@ -67,7 +67,7 @@
 
     &--top {
       width: 100%;
-      height: @picker-content-top-height;
+      height: @picker-content-top-height - .1rem;
       position: absolute;
       left: 0;
       top: 0;
@@ -78,6 +78,7 @@
     &--selected {
       width: 100%;
       height: @picker-content-ul-li-height;
+      box-sizing: border-box;
       border-bottom: 1px solid @border-color-default;
       border-top: 1px solid @border-color-default;
       position: absolute;
@@ -88,7 +89,7 @@
     }
     &--bottom {
       width: 100%;
-      height: @picker-content-top-height;
+      height: @picker-content-top-height - .1rem;
       position: absolute;
       left: 0;
       bottom: 0;
