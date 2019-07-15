@@ -40,35 +40,40 @@
     position: relative;
     width: 100%;
     height: @picker-content-height;
+    overflow: hidden;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    &--touch-event {
+      position: relative;
+      height: @picker-content-height;
+      overflow: hidden;
 
-      li {
-        font-size: @picker-content-font-size;
-        height: @picker-content-ul-li-height;
-        line-height: @picker-content-ul-li-height;
-        //border-bottom: 1px solid @border-color-default;
-        //&:first-of-type {
-        //  border-top: 1px solid @border-color-default;
-        //}
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        li {
+          font-size: @picker-content-font-size;
+          height: @picker-content-ul-li-height;
+          line-height: @picker-content-ul-li-height;
+        }
       }
     }
 
-    &--first {
+    &--top {
       width: 100%;
       height: @picker-content-top-height;
       position: absolute;
       left: 0;
       top: 0;
-      background-color: rgba(0, 0, 0, .1);
+      z-index: 10;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .9)), to(rgba(255, 255, 255, .5)));
+      background: -o-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .9)), to(rgba(255, 255, 255, .5)));
     }
     &--selected {
       width: 100%;
@@ -78,10 +83,18 @@
       position: absolute;
       top: 50%;
       left: 0;
+      z-index: 10;
       transform: translateY(-50%);
     }
     &--bottom {
-
+      width: 100%;
+      height: @picker-content-top-height;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, .9)));
+      background: -o-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, .9)));
     }
   }
 }
