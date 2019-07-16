@@ -32,6 +32,24 @@
       column: {
         type: Object,
         required: true
+      },
+      selected: {
+        type: Number,
+        default: 0
+      }
+    },
+    created() {
+      this.top = Constant.selectedHeight * 2 - this.selected * Constant.selectedHeight;
+      this.$parent.children.indexOf(this) === -1 && this.$parent.children.push(this);
+      this.$emit('touch-end', this.$parent.children.indexOf(this), this.selected);
+    },
+    watch: {
+      top (t) {
+        if (t > Constant.selectedHeight * 2) {
+          this.top = Constant.selectedHeight * 2;
+        } else if (t < Constant.selectedHeight * 2 - (this.column.values.length - 1) * Constant.selectedHeight) {
+          this.top = Constant.selectedHeight * 2 - (this.column.values.length - 1) * Constant.selectedHeight;
+        }
       }
     },
     methods: {
@@ -65,8 +83,8 @@
             this.top = (integer + 1) * Constant.selectedHeight;
           }
         }
-        console.log(remainder)
-        console.log(this.top)
+        const selectedIndex = -(this.top - Constant.selectedHeight * 2) / Constant.selectedHeight;
+        this.$emit('touch-end', this.$parent.children.indexOf(this), selectedIndex === 0 ? +0 : selectedIndex)
       }
     }
   }

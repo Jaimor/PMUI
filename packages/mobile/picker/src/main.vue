@@ -2,15 +2,17 @@
   <div class="pm-picker">
     <div class="pm-picker__header">
       <span class="pm-picker__header__title"> {{title}} </span>
-      <span class="pm-picker__header__cancel">取消</span>
-      <span class="pm-picker__header__done">完成</span>
+      <span class="pm-picker__header__cancel" @click="cancel">取消</span>
+      <span class="pm-picker__header__done" @click="done">完成</span>
     </div>
     <div class="pm-picker__content">
       <column
           class="pm-picker__content--touch-event"
           v-for="(col, index) in columns" :key="`${ulKey}_${index}`"
           :column="col"
+          :selected="col.selected ? col.selected : 0"
           :style="{width: `${100/columns.length}%`}"
+          @touch-end="touchEnd"
       >
       </column>
     </div>
@@ -25,9 +27,8 @@
     data() {
       return {
         ulKey: Constant.ulKey,
-        liKey: Constant.liKey,
-        clientY: 0,
-        top: 0
+        children: [],
+        value: []
       }
     },
     components: { Column },
@@ -38,8 +39,25 @@
         required: true
       }
     },
+    watch: {
+      value(v) {
+        this.$emit('input', v);
+      }
+    },
     methods: {
-
+      touchEnd(childIndex, selectedIndex) {
+        if (childIndex > -1) {
+          const value = [...this.value];
+          value[childIndex] = selectedIndex;
+          this.value = value;
+        }
+      },
+      cancel (e) {
+        this.$emit('on-cancel', e);
+      },
+      done (e) {
+        this.$emit('on-done', e);
+      }
     }
   }
 </script>
