@@ -10,7 +10,7 @@
           class="pm-picker__content--touch-event"
           v-for="(col, index) in columns" :key="`${ulKey}_${index}`"
           :column="col"
-          :selected="col.selected ? col.selected : 0"
+          :selected="values[index] ? values[index] : 0"
           :style="{width: `${100/columns.length}%`}"
           @touch-end="touchEnd"
       >
@@ -28,7 +28,7 @@
       return {
         ulKey: Constant.ulKey,
         children: [],
-        value: []
+        values: [...this.value]
       }
     },
     components: { Column },
@@ -37,19 +37,20 @@
       columns: {
         type: Array,
         required: true
-      }
+      },
+      value: Array
     },
     watch: {
-      value(v) {
+      values(v) {
         this.$emit('input', v);
       }
     },
     methods: {
       touchEnd(childIndex, selectedIndex) {
         if (childIndex > -1) {
-          const value = [...this.value];
-          value[childIndex] = selectedIndex;
-          this.value = value;
+          const values = [...this.values];
+          values[childIndex] = selectedIndex;
+          this.values = values;
         }
       },
       cancel (e) {
@@ -58,6 +59,9 @@
       done (e) {
         this.$emit('on-done', e);
       }
+    },
+    beforeDestroy() {
+
     }
   }
 </script>
