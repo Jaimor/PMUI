@@ -3,7 +3,7 @@
     class="pm-cell pm-input"
   >
     <label
-      class="pm-input__label"
+      :class="['pm-input__label', `pm-input__label--${labelAlign}`]"
       v-if="label"
       :for="id"
     >
@@ -13,6 +13,7 @@
       class="pm-input__input"
       :id="id"
       :type="type"
+      :placeholder="placeholder"
     />
   </div>
 </template>
@@ -35,10 +36,16 @@
         type: String,
         default: null
       },
+      labelAlign: {
+        type: String,
+        default: 'left'
+      },
       required: {
         type: Boolean,
         default: false
-      }
+      },
+      placeholder: String,
+      value: String
     }
   }
 </script>
