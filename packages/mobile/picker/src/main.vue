@@ -21,6 +21,7 @@
 
 <script>
   import Constant from './constant.js';
+  import DatetimeConstant from '../../datetime-picker/src/constant.js';
   import Column from './column.vue';
   export default {
     name: "PmPicker",
@@ -38,7 +39,11 @@
         type: Array,
         required: true
       },
-      value: Array
+      value: Array,
+      type: { //只用于datetime-picker
+        type: String,
+        default: ''
+      }
     },
     watch: {
       values(v) {
@@ -46,10 +51,34 @@
       }
     },
     methods: {
-      touchEnd(childIndex, selectedIndex) {
+      touchEnd(childIndex, selectedIndex, flag) {
         if (childIndex > -1) {
           const values = [...this.values];
           values[childIndex] = selectedIndex;
+
+          if (!flag) {
+            switch (this.type) {
+              case DatetimeConstant.typeMap.date:
+                if (childIndex !== 2) {
+                  const year = this.columns[0].values[values[0]], month = this.columns[1].values[values[1]],
+                    dayIndex = values[2];
+                  const days = DatetimeConstant.util.getCurrentMonthDays(year, month);
+                  DatetimeConstant.util.setTop(this.children[2], year, month, dayIndex, values, 2);
+                  this.columns[2].values = days.values;
+                }
+                break;
+              case DatetimeConstant.typeMap.datetime:
+                if (childIndex === 0 || childIndex === 1) {
+                  const year = this.columns[0].values[values[0]], month = this.columns[1].values[values[1]],
+                    dayIndex = values[2];
+                  const days = DatetimeConstant.util.getCurrentMonthDays(year, month);
+                  DatetimeConstant.util.setTop(this.children[2], year, month, dayIndex, values, 2);
+                  this.columns[2].values = days.values;
+                }
+                break;
+            }
+          }
+
           this.values = values;
         }
       },

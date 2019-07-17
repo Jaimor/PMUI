@@ -41,7 +41,7 @@
     created() {
       this.top = Constant.selectedHeight * 2 - this.selected * Constant.selectedHeight;
       this.$parent.children.indexOf(this) === -1 && this.$parent.children.push(this);
-      this.$emit('touch-end', this.$parent.children.indexOf(this), this.selected);
+      this.$emit('touch-end', this.$parent.children.indexOf(this), this.selected, "created");
     },
     watch: {
       top (t) {
@@ -59,10 +59,8 @@
       },
       touchMove(e) {
         e.preventDefault();
-        // const ul = Constant.util.getParent(e).children[3];
         this.top += e.targetTouches[0].clientY - this.clientY;
         this.clientY = e.targetTouches[0].clientY;
-        // ul.style.top = this.top + 'px';
       },
       touchEnd(e) {
         e.preventDefault();
@@ -85,11 +83,10 @@
         }
         const selectedIndex = -(this.top - Constant.selectedHeight * 2) / Constant.selectedHeight;
         this.$emit('touch-end', this.$parent.children.indexOf(this), selectedIndex === 0 ? +0 : selectedIndex)
+      },
+      modifyTop(top) {
+        this.top = top;
       }
     }
   }
 </script>
-
-<style scoped>
-
-</style>
