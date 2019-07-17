@@ -6,6 +6,7 @@ import CellTest from '@/components/mobile/CellTest'
 import CheckboxTest from '@/components/mobile/CheckboxTest'
 import DatetimePickerTest from '@/components/mobile/DatetimePickerTest'
 import IconTest from '@/components/mobile/IconTest'
+import InputTest from '@/components/mobile/InputTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
 import PickerTest from '@/components/mobile/PickerTest'
 import PopupTest from '@/components/mobile/PopupTest'
@@ -45,6 +46,11 @@ export default new Router({
       path: '/icon',
       name: 'IconTest',
       component: IconTest
+    },
+    {
+      path: '/input',
+      name: 'InputTest',
+      component: InputTest
     },
     {
       path: '/loading',
