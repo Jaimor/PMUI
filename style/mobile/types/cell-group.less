@@ -5,6 +5,13 @@
   font-size: @cell-font-size;
   //padding: @page-level-padding;
 
+  .pm-cell {
+    border-top: 0;
+    &:nth-child(2) {
+      border-top: @border-width-default solid @border-color-default;
+    }
+  }
+
   &__title {
     box-sizing: border-box;
     //font-size: @font-size-default;
