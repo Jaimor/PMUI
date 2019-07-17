@@ -6,6 +6,7 @@ import CheckboxGroup from '../packages/mobile/checkbox-group/index.js';
 import Col from '../packages/mobile/col/index.js';
 import DatetimePicker from '../packages/mobile/datetime-picker/index.js';
 import Icon from '../packages/mobile/icon/index.js';
+import Input from '../packages/mobile/input/index.js';
 import Loading from '../packages/mobile/loading/index.js';
 import Picker from '../packages/mobile/picker/index.js';
 import Popup from '../packages/mobile/popup/index.js';
@@ -21,6 +22,7 @@ const components = [
   Col,
   DatetimePicker,
   Icon,
+  Input,
   Loading,
   Picker,
   Popup,

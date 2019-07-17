@@ -1,5 +1,5 @@
 <template>
-
+  <pm-input label="abc" ></pm-input>
 </template>
 
 <script>
