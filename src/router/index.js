@@ -7,6 +7,7 @@ import CheckboxTest from '@/components/mobile/CheckboxTest'
 import DatetimePickerTest from '@/components/mobile/DatetimePickerTest'
 import IconTest from '@/components/mobile/IconTest'
 import InputTest from '@/components/mobile/InputTest'
+import KeyboardTest from '@/components/mobile/KeyboardTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
 import NavbarTest from '@/components/mobile/NavbarTest'
 import PickerTest from '@/components/mobile/PickerTest'
@@ -52,6 +53,11 @@ export default new Router({
       path: '/input',
       name: 'InputTest',
       component: InputTest
+    },
+    {
+      path: '/keyboard',
+      name: 'KeyboardTest',
+      component: KeyboardTest
     },
     {
       path: '/loading',

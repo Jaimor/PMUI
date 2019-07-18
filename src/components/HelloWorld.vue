@@ -10,6 +10,7 @@
       <pm-cell title="DatetimePicker" is-link path="/datetime-picker"></pm-cell>
       <pm-cell title="Icon图标" is-link path="/icon"></pm-cell>
       <pm-cell title="Input/Textarea" is-link path="/input"></pm-cell>
+      <pm-cell title="数字键盘" is-link path="/keyboard"></pm-cell>
       <pm-cell title="Loading" is-link path="/loading"></pm-cell>
       <pm-cell title="Navbar" is-link path="/navbar"></pm-cell>
       <pm-cell title="Picker" is-link path="/picker"></pm-cell>
