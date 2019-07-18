@@ -24,7 +24,8 @@
       zIndex: {
         type: Number,
         default: ZIndex.nextZIndex()
-      }
+      },
+      back: Boolean
     },
     computed: {
       showLeftSlot() {
@@ -37,6 +38,10 @@
     methods: {
       leftClickHandler(e) {
         this.$emit('left-click', e);
+        if (this.back) {
+          if (this.$router) this.$router.back();
+          else window.history.go(-1);
+        }
       },
       rightClickHandler(e) {
         this.$emit('right-click', e);
