@@ -1,5 +1,23 @@
 @import "../common/index.less";
 
 .pm-keyboard {
+  width: 100%;
+  height: @keyboard-height;
 
+  &__number {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__btn {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
