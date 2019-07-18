@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="logo">
+      PMUI
+    </div>
     <router-view/>
   </div>
 </template>
@@ -24,6 +27,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: rgb(249, 249, 249);
 }
+  .logo {
+    width: 100%;
+    height: 50px;
+    padding: 50px 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+  }
 </style>

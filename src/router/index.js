@@ -8,6 +8,7 @@ import DatetimePickerTest from '@/components/mobile/DatetimePickerTest'
 import IconTest from '@/components/mobile/IconTest'
 import InputTest from '@/components/mobile/InputTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
+import NavbarTest from '@/components/mobile/NavbarTest'
 import PickerTest from '@/components/mobile/PickerTest'
 import PopupTest from '@/components/mobile/PopupTest'
 import RowColTest from '@/components/mobile/RowColTest'
@@ -56,6 +57,11 @@ export default new Router({
       path: '/loading',
       name: 'LoadingTest',
       component: LoadingTest
+    },
+    {
+      path: '/navbar',
+      name: 'NavbarTest',
+      component: NavbarTest
     },
     {
       path: '/picker',

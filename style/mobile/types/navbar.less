@@ -1,0 +1,28 @@
+@import "../common/index.less";
+
+.pm-navbar {
+  width: 100%;
+  height: @navbar-height;
+  line-height: @navbar-line-height;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: @white;
+
+  &__title {
+    flex-grow: 1;
+    text-align: center;
+  }
+  &__left, &__right {
+    text-align: center;
+    width: @navbar-btn-width;
+    color: @blue;
+    font-size: .9rem;
+
+    &:active {
+      color: @blue-selected;
+    }
+  }
+
+}
