@@ -1,5 +1,6 @@
 <template>
   <div class="box">
+    <pm-navbar title="Navbar" left-arrow back></pm-navbar>
     <div class="item">
       <pm-navbar title="测试标题" left-text="返回" left-arrow right-text="搜索"></pm-navbar>
     </div>

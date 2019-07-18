@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pm-navbar title="Picker" left-arrow back></pm-navbar>
     <pm-picker title="测试" :columns="columns" v-model="arr"></pm-picker>
     <div style="margin-top: 20px;">
       <pm-button type="primary" @click="show">显示</pm-button>

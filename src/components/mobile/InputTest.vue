@@ -1,5 +1,6 @@
 <template>
   <div class="box">
+    <pm-navbar title="Input" left-arrow back></pm-navbar>
     <pm-input placeholder="请输入用户名"></pm-input>
     <pm-input label="密码" placeholder="请输入密码" type="password"></pm-input>
     <pm-cell-group title="用户注册">

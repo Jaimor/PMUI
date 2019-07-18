@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pm-navbar title="Checkbox" left-arrow back></pm-navbar>
     <div style="margin-bottom: 10px;">
       <p>基本用法</p>
       <pm-checkbox v-model="check1">这里是基本用法</pm-checkbox>

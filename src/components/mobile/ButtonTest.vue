@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pm-navbar title="Button" left-arrow back></pm-navbar>
     <h3>按钮种类</h3>
     <div class="default">
       <pm-button type="default">默认按钮</pm-button>

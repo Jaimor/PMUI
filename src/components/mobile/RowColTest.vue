@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pm-navbar title="RowCol" left-arrow back></pm-navbar>
     <div class="body">
       <pm-row>
         <pm-col span="8"><div class="content">span_8</div></pm-col>

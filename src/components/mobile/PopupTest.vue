@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pm-navbar title="Popup" left-arrow back></pm-navbar>
     <pm-popup v-model="showTop" position="top" height="100px">我是从顶部弹出来的</pm-popup>
     <pm-popup v-model="showRight" position="right" width="100px">我是从右边弹出来的</pm-popup>
     <pm-popup v-model="showBottom" position="bottom" height="200px">我是从底部弹出来的</pm-popup>

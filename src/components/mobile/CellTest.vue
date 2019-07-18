@@ -1,5 +1,6 @@
 <template>
   <div style="background-color: #f8f8f8;">
+    <pm-navbar title="Cell" left-arrow back></pm-navbar>
     <pm-cell title="ABC" value="abc"></pm-cell>
     <pm-cell-group title="这是一个测试" title-position="right">
       <pm-cell icon="location-o" title="哇哈哈" value="￥20"></pm-cell>

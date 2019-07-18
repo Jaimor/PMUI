@@ -1,5 +1,6 @@
 <template>
   <div class="default">
+    <pm-navbar title="Toast" left-arrow back></pm-navbar>
     <pm-button type="primary" @click="loadingToast">加载中</pm-button>
     <pm-button type="success" @click="successToast">成功按钮</pm-button>
     <pm-button type="warning" @click="warningToast">警告按钮</pm-button>

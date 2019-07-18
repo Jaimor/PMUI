@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pm-navbar title="DatetimePicker" left-arrow back></pm-navbar>
     <pm-datetime-picker title="请选择日期" v-model="date1" type="year-month"></pm-datetime-picker>
     <p>test</p>
     <pm-datetime-picker title="请选择日期" v-model="date2" type="date"></pm-datetime-picker>

@@ -1,44 +1,53 @@
 <template>
   <div class="hello">
-
+    <div class="logo">
+      PMUI
+    </div>
+    <pm-cell-group>
+      <pm-cell title="Button按钮" is-link path="/button"></pm-cell>
+      <pm-cell title="Cell/CellGroup" is-link path="/cell"></pm-cell>
+      <pm-cell title="Checkbox/CheckboxGroup" is-link path="/checkbox"></pm-cell>
+      <pm-cell title="DatetimePicker" is-link path="/datetime-picker"></pm-cell>
+      <pm-cell title="Icon图标" is-link path="/icon"></pm-cell>
+      <pm-cell title="Input/Textarea" is-link path="/input"></pm-cell>
+      <pm-cell title="Loading" is-link path="/loading"></pm-cell>
+      <pm-cell title="Navbar" is-link path="/navbar"></pm-cell>
+      <pm-cell title="Picker" is-link path="/picker"></pm-cell>
+      <pm-cell title="Popup" is-link path="/popup"></pm-cell>
+      <pm-cell title="RowCol" is-link path="/rowcol"></pm-cell>
+      <pm-cell title="Toast" is-link path="/toast"></pm-cell>
+    </pm-cell-group>
   </div>
 </template>
 
 <script>
-import PmButton from "../../packages/mobile/button/src/main";
 export default {
   name: 'HelloWorld',
-  components: {PmButton},
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
   },
   mounted() {
 
   },
   methods: {
-    toast() {
-      this.$toast.success("操作成功");
-    }
+
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .logo {
+    width: 100%;
+    height: 50px;
+    padding: 50px 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+  }
 </style>
