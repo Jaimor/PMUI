@@ -1,6 +1,17 @@
 @import "../common/index.less";
 
-.pm-input {
+.pm-textarea {
+  align-items: flex-start;
+  .pm-cell__icon {
+    margin-top: .4rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   &__label {
     display: inline-block;
@@ -17,9 +28,11 @@
     }
   }
 
-  &__input {
+  &__textarea {
     width: calc(100% - @input-babel-width - @cell-padding);
     border: 0;
     outline: none;
+    flex-grow: 1;
+    resize: none;
   }
 }

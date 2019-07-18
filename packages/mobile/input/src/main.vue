@@ -2,25 +2,32 @@
   <div
     class="pm-cell pm-input"
   >
-    <i v-if="iconClass" :class="['pm-cell__icon', iconClass]" style="padding-right:.4rem;"></i>
-    <pm-icon v-else-if="icon" class="pm-cell__icon" :icon="icon" style="padding-right:.4rem;"></pm-icon>
-    <label
-      :class="['pm-input__label', `pm-input__label--${labelAlign}`]"
-      v-if="label"
-      :for="id"
-    >
-      <span v-if="required" style="color:red;">*</span> {{ label }}
-    </label>
-    <input
-      v-if="type !== 'textarea'"
-      class="pm-input__input"
-      :id="id"
-      :type="type"
-      :placeholder="placeholder"
-      @input="inputHandler"
-      @change="changeHandler"
-    />
-    <textarea v-if="type === 'textarea'"></textarea>
+    <i v-if="iconClass" :class="['pm-cell__icon', iconClass]"></i>
+    <pm-icon v-else-if="icon" class="pm-cell__icon" :icon="icon"></pm-icon>
+    <div class="pm-cell__content">
+      <div class="pm-cell__content--left" :style="{width: widthLeft}">
+        <label
+          :class="['pm-input__label', `pm-input__label--${labelAlign}`]"
+          v-if="label"
+          :for="id"
+        >
+          <span v-if="required" style="color:red;">*</span> {{ label }}
+        </label>
+        <input
+          class="pm-input__input"
+          :id="id"
+          :type="type"
+          :placeholder="placeholder"
+          @input="inputHandler"
+          @change="changeHandler"
+        />
+      </div>
+      <div class="pm-cell__content--right" :style="{width: widthRight}">
+        <div style="position: fixed;">
+          <slot name="button"></slot>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,7 +37,7 @@
     name: "PmInput",
     data() {
       return {
-        id: `${this.label}_${StrUtil.generateRandomStr(3)}`
+        id: `${this.label}_${StrUtil.generateRandomStr(3)}`,
       }
     },
     props: {
@@ -54,6 +61,16 @@
       value: [String, Number],
       icon: String,
       iconClass: String
+    },
+    computed: {
+      widthLeft() {
+        if (this.$slots.button) return '80%';
+        else return '100%';
+      },
+      widthRight() {
+        if (this.$slots.button) return '20%';
+        return '0%';
+      }
     },
     methods: {
       inputHandler(e) {
