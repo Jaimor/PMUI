@@ -7,6 +7,7 @@ import Col from '../packages/mobile/col/index.js';
 import DatetimePicker from '../packages/mobile/datetime-picker/index.js';
 import Icon from '../packages/mobile/icon/index.js';
 import Input from '../packages/mobile/input/index.js';
+import Keyboard from '../packages/mobile/keyboard/index.js';
 import Loading from '../packages/mobile/loading/index.js';
 import Navbar from '../packages/mobile/navbar/index.js';
 import Picker from '../packages/mobile/picker/index.js';
@@ -25,6 +26,7 @@ const components = [
   DatetimePicker,
   Icon,
   Input,
+  Keyboard,
   Loading,
   Navbar,
   Picker,
