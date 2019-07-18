@@ -22,7 +22,9 @@
       isLink: Boolean,
       title: String,
       value: [String, Number],
-      titleRatio: [String, Number]
+      titleRatio: [String, Number],
+      path: String,
+      link: String
     },
     computed: {
       widthTitle() {
@@ -35,6 +37,8 @@
     methods: {
       clickHandler(event) {
         this.$emit("click", event);
+        if (this.path) this.$router.push({path: this.path});
+        else if (this.link) window.location.href = this.link;
       }
     }
   }
