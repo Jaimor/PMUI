@@ -18,6 +18,7 @@
           :id="id"
           :type="type"
           :placeholder="placeholder"
+          :value="value"
           @input="inputHandler"
           @change="changeHandler"
         />
