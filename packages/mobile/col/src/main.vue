@@ -22,7 +22,8 @@
     },
     computed: {
       padding() {
-        return `${Number(this.$parent.gutter) / 2}rem`;
+        if (this.$parent.gutter) return `${Number(this.$parent.gutter) / 2}rem`;
+        return undefined;
       }
     }
   }
