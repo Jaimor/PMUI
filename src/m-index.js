@@ -10,6 +10,7 @@ import Input from '../packages/mobile/input/index.js';
 import Keyboard from '../packages/mobile/keyboard/index.js';
 import Loading from '../packages/mobile/loading/index.js';
 import Navbar from '../packages/mobile/navbar/index.js';
+import CodeBox from '../packages/mobile/code-box/index.js';
 import Picker from '../packages/mobile/picker/index.js';
 import Popup from '../packages/mobile/popup/index.js';
 import Row from '../packages/mobile/row/index.js';
@@ -29,6 +30,7 @@ const components = [
   Keyboard,
   Loading,
   Navbar,
+  CodeBox,
   Picker,
   Popup,
   Row,

@@ -10,6 +10,7 @@ import InputTest from '@/components/mobile/InputTest'
 import KeyboardTest from '@/components/mobile/KeyboardTest'
 import LoadingTest from '@/components/mobile/LoadingTest'
 import NavbarTest from '@/components/mobile/NavbarTest'
+import CodeBoxTest from '@/components/mobile/CodeBoxTest'
 import PickerTest from '@/components/mobile/PickerTest'
 import PopupTest from '@/components/mobile/PopupTest'
 import RowColTest from '@/components/mobile/RowColTest'
@@ -68,6 +69,11 @@ export default new Router({
       path: '/navbar',
       name: 'NavbarTest',
       component: NavbarTest
+    },
+    {
+      path: '/code-box',
+      name: 'CodeBoxTest',
+      component: CodeBoxTest
     },
     {
       path: '/picker',

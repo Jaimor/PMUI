@@ -1,0 +1,42 @@
+@import '../common/index.less';
+
+.pm-code-box {
+  width: 100%;
+  //height: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: @white;
+  box-sizing: border-box;
+  padding: .5rem 0;
+
+  &__box {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &--item {
+      width: 100%;
+      height: @code-box-item-height;
+      line-height: @code-box-item-height;
+      font-size: @code-box-item-font-size;
+      border: 1px solid @border-color-default;
+
+      &--active {
+        border-color: red;
+      }
+    }
+  }
+  &__info {
+    width: 100%;
+    margin-top: .5rem;
+    color: @gray-dark;
+    font-size: .9rem;
+  }
+
+
+}

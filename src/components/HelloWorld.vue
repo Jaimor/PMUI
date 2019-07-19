@@ -13,6 +13,7 @@
       <pm-cell title="数字键盘" is-link path="/keyboard"></pm-cell>
       <pm-cell title="Loading" is-link path="/loading"></pm-cell>
       <pm-cell title="Navbar" is-link path="/navbar"></pm-cell>
+      <pm-cell title="密码输入框" is-link path="/code-box"></pm-cell>
       <pm-cell title="Picker" is-link path="/picker"></pm-cell>
       <pm-cell title="Popup" is-link path="/popup"></pm-cell>
       <pm-cell title="RowCol" is-link path="/rowcol"></pm-cell>
