@@ -13,6 +13,8 @@ import Navbar from '../packages/mobile/navbar/index.js';
 import CodeBox from '../packages/mobile/code-box/index.js';
 import Picker from '../packages/mobile/picker/index.js';
 import Popup from '../packages/mobile/popup/index.js';
+import Radio from '../packages/mobile/radio/index.js';
+import RadioGroup from '../packages/mobile/radio-group/index.js';
 import Row from '../packages/mobile/row/index.js';
 import Textarea from '../packages/mobile/textarea/index.js';
 import Toast from '../packages/mobile/toast/index.js';
@@ -33,6 +35,8 @@ const components = [
   CodeBox,
   Picker,
   Popup,
+  Radio,
+  RadioGroup,
   Row,
   Textarea
 ];

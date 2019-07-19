@@ -13,6 +13,7 @@ import NavbarTest from '@/components/mobile/NavbarTest'
 import CodeBoxTest from '@/components/mobile/CodeBoxTest'
 import PickerTest from '@/components/mobile/PickerTest'
 import PopupTest from '@/components/mobile/PopupTest'
+import RadioTest from '@/components/mobile/RadioTest'
 import RowColTest from '@/components/mobile/RowColTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
@@ -84,6 +85,11 @@ export default new Router({
       path: '/popup',
       name: 'PopupTest',
       component: PopupTest
+    },
+    {
+      path: '/radio',
+      name: 'RadioTest',
+      component: RadioTest
     },
     {
       path: '/rowcol',
