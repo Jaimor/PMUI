@@ -27,7 +27,16 @@
       border: 1px solid @border-color-default;
 
       &--active {
-        border-color: red;
+        animation: pm-code-box 3s infinite alternate;
+      }
+
+      &--no-gutter {
+        border-right: 0;
+      }
+    }
+    .pm-col:last-child {
+      .pm-code-box__box--item--no-gutter {
+        border-right: 1px solid @border-color-default;
       }
     }
   }

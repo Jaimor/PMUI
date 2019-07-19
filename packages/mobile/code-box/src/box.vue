@@ -1,6 +1,12 @@
 <template>
   <div
-    :class="['pm-code-box__box--item', {'pm-code-box__box--item--active': active}]"
+    :class="[
+      'pm-code-box__box--item',
+      {
+        'pm-code-box__box--item--active': active,
+        'pm-code-box__box--item--no-gutter': !this.pmCodeBox.gutter
+      }
+    ]"
     @click="clickHandler"
   >
 

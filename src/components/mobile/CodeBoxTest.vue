@@ -11,6 +11,13 @@
       password
       v-model="password1"
     ></pm-code-box>
+    <p>测试2</p>
+    <pm-code-box
+      ref="psd2"
+      length="6"
+      info="请输入验证码"
+      v-model="password2"
+    ></pm-code-box>
     <pm-popup position="bottom" v-model="open" :show-mask="false">
       <pm-keyboard
         @number-click="numClick"
@@ -27,7 +34,8 @@
     data() {
       return {
         open: false,
-        password1: []
+        password1: [],
+        password2: []
       }
     },
     watch: {
