@@ -30,7 +30,8 @@
       }
     },
     created() {
-      this.pmCodeBox.children.push(this);
+      if (this.pmCodeBox)
+        this.pmCodeBox.children.push(this);
     },
     methods: {
       clickHandler() {
