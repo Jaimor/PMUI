@@ -78,6 +78,10 @@
       },
       focus() {
         if (this.boxIndex < 0 || this.boxIndex >= Number(this.length)) this.boxIndex = 0;
+        this.children[this.boxIndex].notBlur = true;
+      },
+      blur() {
+        if (this.boxIndex >= 0 && this.boxIndex < Number(this.length)) this.children[this.boxIndex].notBlur = false;
       }
     }
   }
