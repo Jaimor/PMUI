@@ -17,6 +17,7 @@
       <pm-cell title="Picker" is-link path="/picker"></pm-cell>
       <pm-cell title="Popup" is-link path="/popup"></pm-cell>
       <pm-cell title="单选框" is-link path="/radio"></pm-cell>
+      <pm-cell title="评分" is-link path="/rate"></pm-cell>
       <pm-cell title="RowCol" is-link path="/rowcol"></pm-cell>
       <pm-cell title="Toast" is-link path="/toast"></pm-cell>
     </pm-cell-group>

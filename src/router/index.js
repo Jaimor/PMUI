@@ -14,6 +14,7 @@ import CodeBoxTest from '@/components/mobile/CodeBoxTest'
 import PickerTest from '@/components/mobile/PickerTest'
 import PopupTest from '@/components/mobile/PopupTest'
 import RadioTest from '@/components/mobile/RadioTest'
+import RateTest from '@/components/mobile/RateTest'
 import RowColTest from '@/components/mobile/RowColTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
@@ -90,6 +91,11 @@ export default new Router({
       path: '/radio',
       name: 'RadioTest',
       component: RadioTest
+    },
+    {
+      path: '/rate',
+      name: 'RateTest',
+      component: RateTest
     },
     {
       path: '/rowcol',
