@@ -34,10 +34,10 @@
         this.$emit('input', childIndex);
       },
       reloadChecked(v, oldV) {
-        if (oldV && oldV >= 0 && oldV < this.children.length) {
+        if (typeof oldV !== "undefined" && oldV >= 0 && oldV < this.children.length) {
           this.children[oldV].checked = false;
         }
-        if (v && v >= 0 && v < this.children.length) this.children[v].checked = true;
+        if (v >= 0 && v < this.children.length) this.children[v].checked = true;
       }
     }
   }

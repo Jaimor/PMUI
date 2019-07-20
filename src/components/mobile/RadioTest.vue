@@ -9,6 +9,12 @@
       <pm-radio>xxx</pm-radio>
       <pm-radio>xxx</pm-radio>
     </pm-radio-group>
+    <p>选项组</p>
+    <pm-radio-group v-model="radios2" >
+      <pm-radio>xxx</pm-radio>
+      <pm-radio checked-color="red">xxx</pm-radio>
+      <pm-radio>xxx</pm-radio>
+    </pm-radio-group>
   </div>
 </template>
 
@@ -18,7 +24,8 @@
     data() {
       return {
         base: false,
-        radios1: -1
+        radios1: -1,
+        radios2: 1
       }
     },
     watch: {

@@ -53,6 +53,7 @@
     computed: {
       show() {
         let show = this.value;
+        if (this.pmRadioGroup) show = this.checked;
         if (show) {
           this.iconBackgroundColor = this.checkedColor;
           this.iconBorderColor = this.checkedColor;
