@@ -16,6 +16,7 @@ import PopupTest from '@/components/mobile/PopupTest'
 import RadioTest from '@/components/mobile/RadioTest'
 import RateTest from '@/components/mobile/RateTest'
 import RowColTest from '@/components/mobile/RowColTest'
+import SearchTest from '@/components/mobile/SearchTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
 Vue.use(Router)
@@ -101,6 +102,11 @@ export default new Router({
       path: '/rowcol',
       name: 'RowColTest',
       component: RowColTest
+    },
+    {
+      path: '/search',
+      name: 'SearchTest',
+      component: SearchTest
     },
     {
       path: '/toast',
