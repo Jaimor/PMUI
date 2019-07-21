@@ -17,6 +17,7 @@ import RadioTest from '@/components/mobile/RadioTest'
 import RateTest from '@/components/mobile/RateTest'
 import RowColTest from '@/components/mobile/RowColTest'
 import SearchTest from '@/components/mobile/SearchTest'
+import StepperTest from '@/components/mobile/StepperTest'
 import ToastTest from '@/components/mobile/ToastTest'
 
 Vue.use(Router)
@@ -107,6 +108,11 @@ export default new Router({
       path: '/search',
       name: 'SearchTest',
       component: SearchTest
+    },
+    {
+      path: '/stepper',
+      name: 'StepperTest',
+      component: StepperTest
     },
     {
       path: '/toast',

@@ -18,6 +18,7 @@ import RadioGroup from '../packages/mobile/radio-group/index.js';
 import Rate from '../packages/mobile/rate/index.js';
 import Row from '../packages/mobile/row/index.js';
 import Search from '../packages/mobile/search/index.js';
+import Stepper from '../packages/mobile/stepper/index.js';
 import Textarea from '../packages/mobile/textarea/index.js';
 import Toast from '../packages/mobile/toast/index.js';
 
@@ -42,6 +43,7 @@ const components = [
   Rate,
   Row,
   Search,
+  Stepper,
   Textarea
 ];
 
