@@ -1,5 +1,48 @@
 @import "../common/index.less";
 
 .pm-search {
+  width: 100%;
+  height: @search-height;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: @search-padding;
+  background-color: @white;
+  box-sizing: border-box;
 
+  &__content {
+    flex-grow: 1;
+    height: @search-item-height;
+    line-height: @search-item-height;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: @search-content-bgcolor;
+    border-radius: @border-radius-default;
+
+    &__icon {
+      width: @search-icon-width;
+      text-align: center;
+      line-height: @search-item-height;
+    }
+
+    &__input {
+      flex-grow: 1;
+      input {
+        outline: none;
+        border: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: .5rem;
+        background-color: transparent;
+        font-size: inherit;
+      }
+    }
+  }
+
+  &__btn {
+    width: @search-btn-width;
+    height: @search-item-height;
+    line-height: @search-item-height;
+    text-align: center;
+    color: @blue;
+  }
 }
