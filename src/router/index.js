@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import ActionSheetTest from '@/components/mobile/ActionSheetTest'
 import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
 import CheckboxTest from '@/components/mobile/CheckboxTest'
@@ -28,6 +29,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/action-sheet',
+      name: 'ActionSheetTest',
+      component: ActionSheetTest
     },
     {
       path: '/button',

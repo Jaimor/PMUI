@@ -1,3 +1,4 @@
+import ActionSheet from '../packages/mobile/action-sheet/index.js';
 import Button from '../packages/mobile/button/index.js';
 import Cell from '../packages/mobile/cell/index.js';
 import CellGroup from '../packages/mobile/cell-group/index.js';
@@ -23,6 +24,7 @@ import Textarea from '../packages/mobile/textarea/index.js';
 import Toast from '../packages/mobile/toast/index.js';
 
 const components = [
+  ActionSheet,
   Button,
   Cell,
   CellGroup,
