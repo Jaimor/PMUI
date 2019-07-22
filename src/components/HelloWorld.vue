@@ -4,6 +4,7 @@
       PMUI
     </div>
     <pm-cell-group>
+      <pm-cell title="ActionSheet" is-link path="/action-sheet"></pm-cell>
       <pm-cell title="Button按钮" is-link path="/button"></pm-cell>
       <pm-cell title="Cell/CellGroup" is-link path="/cell"></pm-cell>
       <pm-cell title="Checkbox/CheckboxGroup" is-link path="/checkbox"></pm-cell>

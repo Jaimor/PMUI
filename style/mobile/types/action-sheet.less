@@ -1,5 +1,71 @@
 @import "../common/index.less";
 
 .pm-action-sheet {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  background-color: @white;
 
+  &__title {
+    width: 100%;
+    height: @action-sheet-title-height;
+    line-height: @action-sheet-title-height;
+    border-bottom: 1px solid @border-color-default;
+  }
+
+  &__btn {
+    width: 100%;
+    height: @action-sheet-btn-height;
+    line-height: @action-sheet-btn-height;
+    border-bottom: 1px solid @border-color-default;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &:active {
+      background-color: @action-sheet-btn-action-bgcolor;
+    }
+  }
+
+  &__cancel {
+    width: 100%;
+    height: @action-sheet-title-height;
+    background-color: @background-color-default;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &--btn {
+      background-color: @white;
+      height: @action-sheet-btn-height;
+      line-height: @action-sheet-btn-height;
+      color: @red;
+
+      &:active {
+        background-color: @action-sheet-btn-action-bgcolor;
+      }
+    }
+  }
+
+
+  &--circle {
+    background-color: transparent;
+
+    &__title {
+      //width: 100%;
+      //height: @action-sheet-title-height;
+      //line-height: @action-sheet-title-height;
+      border: 1px solid @border-color-default;
+      border-radius: .25rem .25rem 0 0;
+    }
+  }
+}
+
+.pm-popup--action-sheet {
+  background-color: transparent;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
 }
