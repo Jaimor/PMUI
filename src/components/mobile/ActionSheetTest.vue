@@ -6,7 +6,7 @@
         v-model="show"
         title="测试"
         :actions="actions"
-        @action-click="action"
+        @click="action"
     ></pm-action-sheet>
   </div>
 </template>
