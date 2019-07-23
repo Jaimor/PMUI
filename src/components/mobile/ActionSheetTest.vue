@@ -22,7 +22,7 @@
     },
     methods: {
       open() {
-        this.show = true;
+        this.show = true
       },
       action(index) {
         alert(index);
