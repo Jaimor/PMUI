@@ -38,5 +38,5 @@ export default {
 #### events
 | 事件名称 | 说明 | 回调参数 | 
 | --- | --- | --- |
-| click | 点击选项事件 | event |
+| click | 点击选项事件 | actions中被点击的下标 |
 | cancel | 点击取消按钮事件 | event |
