@@ -37,11 +37,11 @@
     },
     methods: {
       btnClickHandler(index) {
-        this.$emit('action-click', index);
+        this.$emit('click', index);
       },
       cancelClickHandler(e) {
         this.$emit('input', false);
-        this.$emit('cancel-click', e);
+        this.$emit('cancel', e);
       }
     }
   }
