@@ -1,4 +1,4 @@
-###示例
+### 示例
 ```js
 <pm-button type="success" @click="open">打开</pm-button>
 <pm-action-sheet
@@ -26,8 +26,8 @@ export default {
     }
   }
 ```
-###属性方法
-####props
+### 属性方法
+#### props
 | 参数 | 类型 | 说明 | 可选参数 | 默认值 |
 | --- | --- | --- | --- | ---|
 | v-model | Boolean | 控制显示 | true,false | false |
@@ -35,7 +35,7 @@ export default {
 | title | String | 标题(可选)，填写了就显示 | - | - |
 | actions | Array | 选项列，数据示例[{title: '按钮1'}, {title: '按钮2'}] | - | - |
 | actionKey | String | 数据列中的属性名称(可选) | - | title |
-####events
+#### events
 | 事件名称 | 说明 | 回调参数 | 
 | --- | --- | --- |
 | click | 点击选项事件 | event |
