@@ -9,6 +9,7 @@
       <pm-cell title="Cell/CellGroup" is-link path="/cell"></pm-cell>
       <pm-cell title="Checkbox/CheckboxGroup" is-link path="/checkbox"></pm-cell>
       <pm-cell title="DatetimePicker" is-link path="/datetime-picker"></pm-cell>
+      <pm-cell title="对话框" is-link path="/dialog"></pm-cell>
       <pm-cell title="Icon图标" is-link path="/icon"></pm-cell>
       <pm-cell title="Input/Textarea" is-link path="/input"></pm-cell>
       <pm-cell title="数字键盘" is-link path="/keyboard"></pm-cell>
