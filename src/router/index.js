@@ -6,6 +6,7 @@ import ButtonTest from '@/components/mobile/ButtonTest'
 import CellTest from '@/components/mobile/CellTest'
 import CheckboxTest from '@/components/mobile/CheckboxTest'
 import DatetimePickerTest from '@/components/mobile/DatetimePickerTest'
+import DialogTest from '@/components/mobile/DialogTest'
 import IconTest from '@/components/mobile/IconTest'
 import InputTest from '@/components/mobile/InputTest'
 import KeyboardTest from '@/components/mobile/KeyboardTest'
@@ -54,6 +55,11 @@ export default new Router({
       path: '/datetime-picker',
       name: 'DatetimePickerTest',
       component: DatetimePickerTest
+    },
+    {
+      path: '/dialog',
+      name: 'DialogTest',
+      component: DialogTest
     },
     {
       path: '/icon',

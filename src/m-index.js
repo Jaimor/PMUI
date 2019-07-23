@@ -6,6 +6,7 @@ import Checkbox from '../packages/mobile/checkbox/index.js';
 import CheckboxGroup from '../packages/mobile/checkbox-group/index.js';
 import Col from '../packages/mobile/col/index.js';
 import DatetimePicker from '../packages/mobile/datetime-picker/index.js';
+import Dialog from '../packages/mobile/dialog/index.js';
 import Icon from '../packages/mobile/icon/index.js';
 import Input from '../packages/mobile/input/index.js';
 import Keyboard from '../packages/mobile/keyboard/index.js';
@@ -54,6 +55,7 @@ const install = (Vue) => {
     Vue.component(component.name, component);
   });
   Vue.prototype.$toast = Toast;
+  Vue.prototype.$dialog = Dialog;
 };
 
 export default {
