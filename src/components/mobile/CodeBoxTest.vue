@@ -7,7 +7,7 @@
       length="4"
       gutter="1"
       info="请输入验证码"
-      @box-click="boxClick('psd1')"
+      @click="boxClick('psd1')"
       v-model="password1"
     ></pm-code-box>
     <p>测试2</p>
@@ -17,7 +17,7 @@
       info="请输入验证码"
       v-model="password2"
       password
-      @box-click="boxClick('psd2')"
+      @click="boxClick('psd2')"
     ></pm-code-box>
     <pm-popup position="bottom" v-model="open" :show-mask="false">
       <pm-keyboard

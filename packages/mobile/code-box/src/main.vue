@@ -64,7 +64,7 @@
             break;
           }
         }
-        this.$emit('box-click');
+        this.$emit('click');
       },
       input(v) {
         this.children[this.boxIndex].input(this.password ? '·' : v);
