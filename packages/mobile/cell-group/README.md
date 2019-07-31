@@ -1,5 +1,5 @@
 ### 示例
-```js
+```html
 <pm-cell-group title="基础信息">
   <pm-cell title="年龄" value="20"></pm-cell>
   <pm-cell title="性别" value="男" :title-ratio="5"></pm-cell>

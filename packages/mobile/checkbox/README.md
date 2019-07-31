@@ -1,5 +1,5 @@
 ### 示例
-```js
+```html
 <pm-checkbox v-model="check1">这里是基本用法</pm-checkbox>
 
 <pm-checkbox-group v-model="checkGroup">

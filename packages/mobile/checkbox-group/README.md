@@ -1,5 +1,5 @@
 ### 示例
-```js
+```html
 <pm-checkbox-group v-model="checkGroup">
   <pm-checkbox>组1</pm-checkbox>
   <pm-checkbox>组2</pm-checkbox>

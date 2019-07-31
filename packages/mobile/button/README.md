@@ -1,5 +1,5 @@
 ### 示例
-```js
+```html
 <pm-button type="primary" size="normal" plain>普通按钮</pm-button>
 ```
 ### 属性方法

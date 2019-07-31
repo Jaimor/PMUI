@@ -1,5 +1,5 @@
 ### 示例
-```js
+```html
 <pm-cell title="基础用法" value="abc"></pm-cell>
 
 <pm-cell-group title="基础信息">

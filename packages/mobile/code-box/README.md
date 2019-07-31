@@ -1,5 +1,5 @@
 ### 示例
-```js
+```html
 <pm-code-box
   ref="psd1"
   length="4"
